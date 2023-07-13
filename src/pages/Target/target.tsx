@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useState, useEffect, useContext } from "react";
 import { StoreContext } from "@/util/store";
 import axios from "axios";
@@ -22,13 +23,12 @@ const target = () => {
   const [data, setData] = useState([]);
   const [persona, setPersona] = useState(null);
   const [test, setTest] = useState([]);
-  const { topic, globalVariable, updateGlobalVariable } =
-    useContext(StoreContext);
+  const { topic, globalVariable } = useContext(StoreContext);
   const [job, setJob] = useState([]);
   const [why, setWhy] = useState([]);
   const [newLoading, setNewLoading] = useState(false);
   const [showIndustry, setShowIndustry] = useState(false);
-  const [industry, setIndustry] = useState([]);
+  const [industry, setIndustry] = useState("");
   const [inLoading, setInLoading] = useState(false);
 
   useEffect(() => {
@@ -444,7 +444,7 @@ const target = () => {
             ) : (
               <div
                 className={`bg-white shadow-md p-6 mb-4 ${
-                  inLoading || industry.length === 0 ? "hidden" : ""
+                  inLoading || !industry ? "hidden" : ""
                 }`}
               >
                 <div className="flex items-center justify-between">

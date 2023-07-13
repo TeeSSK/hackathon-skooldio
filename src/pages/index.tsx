@@ -1,4 +1,4 @@
-import Particles from "../components/particles";
+// import Particles from "../components/particles";
 import Link from "next/link";
 
 const navigation = [
@@ -23,10 +23,10 @@ export default function Home() {
         </ul>
       </nav>
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-      <Particles
+      {/* <Particles
         className="absolute inset-0 -z-10 animate-fade-in"
         quantity={100}
-      />
+      /> */}
       <h1 className="flex flex-col items-center z-10 animate-text-fade-in text-8xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display whitespace-nowrap bg-clip-text ">
         Skooldio's Hackathon 2023
       </h1>
