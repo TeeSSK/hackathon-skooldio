@@ -4,7 +4,7 @@ const CardLists = ({ benefits }) => {
   return (
     <div>
       {benefits.map((benefit, index) => (
-        <Card key={index} benefit={benefit} index={index} />
+        <Card key={index} benefit={benefit} />
       ))}
     </div>
   );
