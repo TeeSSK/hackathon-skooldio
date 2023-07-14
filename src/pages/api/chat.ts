@@ -21,7 +21,7 @@ export default async function handler(req, res) {
 
       const response = await axios.post(url, body, {
         headers: headers,
-        timeout: 10000,
+        timeout: 60000,
       });
 
       res.status(200).json(response.data);
