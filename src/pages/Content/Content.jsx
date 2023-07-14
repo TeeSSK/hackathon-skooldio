@@ -11,7 +11,7 @@ const initialPersona = {
   currentWork: "Software Engineer",
 };
 
-const Personas = () => {
+const Content = () => {
   const [topic, setTopic] = useState("");
   const [detail, setDetail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -158,7 +158,7 @@ const Personas = () => {
 
   return (
     <div className="flex flex-col items-center justify-center overflow-x-hidden overflow-y-scroll min-h-screen bg-black via-zinc-600/20 to-black">
-      <div className="text-white">This is personas page</div>
+      <div className="text-white">This is content page</div>
       <div className="max-w-4xl w-full bg-white">
         <form onSubmit={handleSubmit} className="rounded px-8 py-6">
           <div className="mb-4">
@@ -180,8 +180,8 @@ const Personas = () => {
               avoid to use specific name and explain the topic instead
             </div>
             <div className="text-sm text-zinc-500">
-              For example: midjourney ai. Please, write topic like{" "}
-              {`"The Ai for generate image with text"`}
+              For example: Midjourney AI. Please, write topic like{" "}
+              {`"The AI for generate image with text"`}
             </div>
           </div>
           <div className="flex items-center justify-between">
@@ -238,4 +238,4 @@ const Personas = () => {
   );
 };
 
-export default Personas;
+export default Content;

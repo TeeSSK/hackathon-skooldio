@@ -19,7 +19,10 @@ export default async function handler(req, res) {
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       };
 
-      const response = await axios.post(url, body, { headers: headers });
+      const response = await axios.post(url, body, {
+        headers: headers,
+        timeout: 10000,
+      });
 
       res.status(200).json(response.data);
     } catch (error) {
